@@ -3,7 +3,7 @@ using NunitAppiumProj.Pages;
 
 namespace NunitAppiumProj.TestClass
 {
-    /* Opps: pillars 
+    /* Oops: pillars 
      * Abstraction   : AppiumDriver Interface, 
      * Inheritance   : from Base class getting the driver instance
      * Encpsulation  : Making the members private/ Protected 
