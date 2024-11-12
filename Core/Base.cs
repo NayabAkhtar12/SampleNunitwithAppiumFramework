@@ -1,13 +1,18 @@
-﻿using OpenQA.Selenium.Appium;
+﻿using AventStack.ExtentReports;
+using AventStack.ExtentReports.Reporter;
+using OpenQA.Selenium.Appium;
 using OpenQA.Selenium.Appium.Android;
 using OpenQA.Selenium.Appium.Enums;
 
-namespace NunitAppiumProj.Core
+namespace ARDrawandSketch.Core
 {
     [TestFixture]
     public class Base
     {
         protected AppiumDriver<AndroidElement>? driver;
+        public static ExtentReports Extent;
+        private static ExtentSparkReporter _reporter;
+
         public AppiumDriver<AndroidElement>? Driver
         {
             get
@@ -16,7 +21,13 @@ namespace NunitAppiumProj.Core
             }
         }
         //   protected AppiumDriver<AndroidElement> Driver => driver; // Protected property to access driver
-
+        static Base()
+        {
+            string reportPath = @"D:\Reports\ARDrawandSketchTestReport.html";
+            _reporter = new ExtentSparkReporter(reportPath);
+            Extent = new ExtentReports();
+            Extent.AttachReporter(_reporter);
+        }
         [SetUp]
         public void Setup()
         {
@@ -30,10 +41,10 @@ namespace NunitAppiumProj.Core
                 cap.AddAdditionalCapability("appium:automationName", AutomationName.AndroidUIAutomator2);
 
                 // This is the key part that will launch the app
-                cap.AddAdditionalCapability("appPackage", "com.holyquran.alquran.majeed.qibla.prayertimes.tasbeeh.hisnulmuslim");
-                cap.AddAdditionalCapability("appActivity", "com.holyquran.alquran.majeed.qibla.prayertimes.tasbeeh.hisnulmuslim.ui.activities.MainActivity");
+                cap.AddAdditionalCapability("appPackage", "");
+                cap.AddAdditionalCapability("appActivity", "");
                 string Appiumuri = "http://127.0.0.1:4723/";
-                string Appiumuri1 = "http://192.168.100.14:4723/";
+                //     string Appiumuri1 = "http://192.168.100.14:4723/";
 
                 driver = new AndroidDriver<AndroidElement>(new Uri(Appiumuri), cap, TimeSpan.FromSeconds(180));
                 driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
@@ -41,10 +52,10 @@ namespace NunitAppiumProj.Core
             }
             catch (Exception e)
             {
-                HandleException(e, "Failed to initialize driver in Setup");
+                HandleException1(e, "Failed to initialize driver in Setup");
             }
         }
-        protected void HandleException(Exception ex, string context)
+        protected void HandleException1(Exception ex, string context)
         {
             // Log the exception message and stack trace
             Console.WriteLine($"Exception occurred: {context}");

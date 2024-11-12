@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Automation-Projects\\SampleNunitAppiumFramework\\NunitAppiumProj.csproj": {}
+    "D:\\Automation-Projects\\ARDrawingandSketch\\NunitAppiumProj.csproj": {}
   },
   "projects": {
-    "D:\\Automation-Projects\\SampleNunitAppiumFramework\\NunitAppiumProj.csproj": {
+    "D:\\Automation-Projects\\ARDrawingandSketch\\NunitAppiumProj.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Automation-Projects\\SampleNunitAppiumFramework\\NunitAppiumProj.csproj",
+        "projectUniqueName": "D:\\Automation-Projects\\ARDrawingandSketch\\NunitAppiumProj.csproj",
         "projectName": "NunitAppiumProj",
-        "projectPath": "D:\\Automation-Projects\\SampleNunitAppiumFramework\\NunitAppiumProj.csproj",
+        "projectPath": "D:\\Automation-Projects\\ARDrawingandSketch\\NunitAppiumProj.csproj",
         "packagesPath": "C:\\Users\\nayab\\.nuget\\packages\\",
-        "outputPath": "D:\\Automation-Projects\\SampleNunitAppiumFramework\\obj\\",
+        "outputPath": "D:\\Automation-Projects\\ARDrawingandSketch\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
